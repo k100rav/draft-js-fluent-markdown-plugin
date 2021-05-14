@@ -1,5 +1,6 @@
-import {DraftDecorator, DraftDecoratorComponentProps} from 'draft-js';
+import {DraftDecorator} from 'draft-js';
 import React, {FunctionComponent} from 'react';
+import {DraftDecoratorComponentProps} from '../@utils/draft';
 
 export function createCodeDecorator(): DraftDecorator {
   const Code: FunctionComponent<DraftDecoratorComponentProps> = ({

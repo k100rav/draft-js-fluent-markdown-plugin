@@ -1,9 +1,9 @@
-import linkifyIt, {LinkifyIt, Rule} from 'linkify-it';
+import linkifyIt, {LinkifyIt} from 'linkify-it';
 import tlds from 'tlds';
 
 export interface CustomLinkifyRule {
   schema: string;
-  definition: Rule;
+  definition: string;
 }
 
 export const linkify = (rules?: CustomLinkifyRule[]): LinkifyIt => {

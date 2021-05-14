@@ -6,7 +6,7 @@ import {
   Modifier,
   SelectionState,
 } from 'draft-js';
-import {EditorPluginFunctions} from 'draft-js-plugins-editor';
+import {PluginFunctions as EditorPluginFunctions} from '@draft-js-plugins/editor';
 import React, {Component, MouseEvent, ReactNode} from 'react';
 
 import {BlockDescriptorBuilderEntry} from '../@block';

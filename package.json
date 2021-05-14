@@ -6,6 +6,7 @@
   "description": "Draft.js Fluent Markdown Plugin",
   "repository": "https://github.com/makeflow/draft-js-fluent-markdown-plugin.git",
   "scripts": {
+    "start:demo": "rimraf bld/library && tsc --project src/library && parcel demo/index.html",
     "build-pages": "rimraf gh-pages/* && parcel build demo/index.html --out-dir gh-pages --public-url /draft-js-fluent-markdown-plugin && yarn publish-pages",
     "publish-pages": "./scripts/publish-pages.sh",
     "update-regexes": "node scripts/update-regexes.js",
@@ -28,36 +29,36 @@
     "bld/library"
   ],
   "peerDependencies": {
-    "draft-js": "^0.10.5",
-    "draft-js-plugins-editor": "^2.1.1",
-    "react": "16"
+    "draft-js": "^0.11.7",
+    "@draft-js-plugins/editor": "^4.1.0",
+    "react": "17"
   },
   "dependencies": {
-    "detect-indent": "^5.0.0",
-    "immutable": "~3.7.4",
-    "linkify-it": "^2.1.0",
-    "tlds": "^1.203.1"
+    "detect-indent": "^6.0.0",
+    "immutable": "~4.0.0-rc.12",
+    "linkify-it": "^3.0.2",
+    "tlds": "^1.221.1"
   },
   "devDependencies": {
-    "@magicspace/configs": "^0.1.46",
-    "@types/detect-indent": "^5.0.0",
-    "@types/draft-js": "^0.10.26",
-    "@types/linkify-it": "^2.0.4",
-    "@types/react": "^16.7.17",
-    "@types/react-dom": "^16.0.11",
+    "@draft-js-plugins/editor": "^4.1.0",
+    "@magicspace/configs": "^0.2.5",
+    "@types/detect-indent": "^6.0.0",
+    "@types/draft-js": "^0.11.2",
+    "@types/linkify-it": "^3.0.1",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
     "@types/tlds": "^1.199.0",
-    "cssnano": "^4.1.8",
-    "draft-js": "^0.10.5",
-    "draft-js-plugins-editor": "^2.1.1",
-    "glob": "^7.1.3",
-    "prettier": "^1.15.3",
-    "puppeteer-core": "^1.11.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "cssnano": "^5.0.2",
+    "draft-js": "^0.11.7",
+    "glob": "^7.1.7",
+    "prettier": "^2.3.0",
+    "puppeteer-core": "^9.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "regex-tools": "^0.3.8",
-    "rimraf": "^2.6.2",
-    "tslint": "^5.11.0",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.3",
     "tslint-language-service": "^0.9.9",
-    "typescript": "^3.9.7"
+    "typescript": "^4.2.4 "
   }
 }

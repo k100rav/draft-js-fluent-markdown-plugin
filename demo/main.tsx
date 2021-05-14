@@ -1,7 +1,7 @@
 import 'draft-js/dist/Draft.css';
 
 import {EditorState, convertFromRaw} from 'draft-js';
-import Editor from 'draft-js-plugins-editor';
+import Editor from '@draft-js-plugins/editor';
 import React, {Component, FC, ReactNode} from 'react';
 import ReactDOM from 'react-dom';
 
@@ -67,8 +67,7 @@ const DEMO_CONTENT = convertFromRaw({
     },
     {
       key: 'evlc2',
-      text:
-        'This is a demo for draft-js-fluent-markdown-plugin, have fun typing!',
+      text: 'This is a demo for draft-js-fluent-markdown-plugin, have fun typing!',
       type: 'unstyled',
       depth: 0,
       inlineStyleRanges: [

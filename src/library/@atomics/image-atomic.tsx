@@ -1,7 +1,7 @@
-import {DraftBlockRendererComponentProps} from 'draft-js';
 import React, {FunctionComponent} from 'react';
 
 import {AtomicData, AtomicDescriptorEntry} from '../@atomic';
+import {DraftBlockRendererComponentProps} from '../@utils/draft';
 
 export interface ImageData extends AtomicData {
   alt: string;

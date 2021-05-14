@@ -8,7 +8,10 @@ import {
   EditorState,
   RichUtils,
 } from 'draft-js';
-import {EditorPluginFunctions} from 'draft-js-plugins-editor';
+import {
+  EditorPlugin,
+  PluginFunctions as EditorPluginFunctions,
+} from '@draft-js-plugins/editor';
 import * as Immutable from 'immutable';
 import {KeyboardEvent} from 'react';
 
@@ -66,7 +69,7 @@ export interface FluentMarkdownPluginOptions {
   indent?: FluentMarkdownPluginIndentOptions;
 }
 
-export class FluentMarkdownPlugin {
+export class FluentMarkdownPlugin implements EditorPlugin {
   blockRenderMap: DraftBlockRenderMap;
 
   decorators: DraftDecorator[];
@@ -147,7 +150,7 @@ export class FluentMarkdownPlugin {
   onTab = (
     event: KeyboardEvent,
     {getEditorState, setEditorState}: EditorPluginFunctions,
-  ): DraftHandleValue => {
+  ): true | void => {
     let editorState = getEditorState();
 
     let nextEditorState = handleTabIndent(
@@ -162,9 +165,9 @@ export class FluentMarkdownPlugin {
 
     if (nextEditorState !== editorState) {
       setEditorState(nextEditorState);
-      return 'handled';
+      return true;
     } else {
-      return 'not-handled';
+      return;
     }
   };
 
@@ -198,6 +201,7 @@ export class FluentMarkdownPlugin {
   handleBeforeInput = (
     input: string,
     editorState: EditorState,
+    _: number,
     {setEditorState}: EditorPluginFunctions,
   ): DraftHandleValue => {
     let nextEditorState = this.triggerFeature(input, editorState);
@@ -237,6 +241,7 @@ export class FluentMarkdownPlugin {
   handleKeyCommand = (
     command: DraftEditorCommand,
     editorState: EditorState,
+    _: number,
     {setEditorState}: EditorPluginFunctions,
   ): DraftHandleValue => {
     let nextEditorState: EditorState | undefined;
@@ -299,6 +304,6 @@ export class FluentMarkdownPlugin {
 
 export function createFluentMarkdownPlugin(
   options: FluentMarkdownPluginOptions = {},
-): FluentMarkdownPlugin {
+): EditorPlugin {
   return new FluentMarkdownPlugin(options);
 }

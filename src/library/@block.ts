@@ -1,4 +1,4 @@
-import {EditorPluginFunctions} from 'draft-js-plugins-editor';
+import {PluginFunctions as EditorPluginFunctions} from '@draft-js-plugins/editor';
 import {ComponentType} from 'react';
 
 export interface BlockData {

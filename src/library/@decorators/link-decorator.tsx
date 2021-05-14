@@ -1,5 +1,6 @@
-import {DraftDecorator, DraftDecoratorComponentProps} from 'draft-js';
+import {DraftDecorator} from 'draft-js';
 import React, {ComponentType, FunctionComponent, createElement} from 'react';
+import {DraftDecoratorComponentProps} from '../@utils/draft';
 
 import {
   CustomLinkifyRule,

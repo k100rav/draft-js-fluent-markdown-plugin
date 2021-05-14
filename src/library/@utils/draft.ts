@@ -2,10 +2,21 @@ import {
   CharacterMetadata,
   ContentBlock,
   ContentState,
-  DraftEntityInstance,
+  EntityInstance as DraftEntityInstance,
   EditorState,
   SelectionState,
 } from 'draft-js';
+
+export interface DraftBlockRendererComponentProps {
+  block: ContentBlock;
+  contentState: ContentState;
+}
+
+export interface DraftDecoratorComponentProps {
+  contentState: ContentState;
+  decoratedText: string;
+  entityKey: string | null;
+}
 
 export interface ContentSelectionAmbient {
   content: ContentState;

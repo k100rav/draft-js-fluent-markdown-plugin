@@ -1,11 +1,19 @@
-[![NPM Package](https://badge.fury.io/js/draft-js-fluent-markdown-plugin.svg)](https://www.npmjs.com/package/draft-js-fluent-markdown-plugin)
-[![Build Status](https://travis-ci.org/makeflow/draft-js-fluent-markdown-plugin.svg?branch=master)](https://travis-ci.org/makeflow/draft-js-fluent-markdown-plugin)
-
 # Draft.js Fluent Markdown Plugin
 
-Just another Draft.js markdown plugin. Online [DEMO](https://makeflow.github.io/draft-js-fluent-markdown-plugin/).
+Just another Draft.js markdown plugin. Online [DEMO](https://k100rav.github.io/draft-js-fluent-markdown-plugin/).
 
 ![fluent-markdown](https://user-images.githubusercontent.com/970430/50377868-5d182000-0660-11e9-9535-4636e6e2908d.gif)
+
+## Why this fork exists?
+
+This plugin is forked from the excellent [`draft-js-fluent-markdown-plugin`](https://github.com/makeflow/draft-js-fluent-markdown-plugin) by [makeflow](https://github.com/makeflow).
+
+It has a single commit to make it compatible with draft-js 0.11 and React 17. This fork will be active until that support is added to the original plugin.
+
+Changes:
+
+- Add support for draft-js 0.11.7 and React 17.
+- Based on draft-js-plugins/editor 4.1
 
 ## Features
 
